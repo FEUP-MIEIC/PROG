@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 	int n=1;
 	bool prime=true;
-	while (n <= 100) {
+	while (n <= 10000) {
 		int i = n - 1;
 		while (i >= floor(sqrt(n))) {
 			if (n%i == 0) {
@@ -16,7 +16,7 @@ int main() {
 			i--;
 		}
 		if(prime)
-			cout << n << " ";
+			cout << n << "\n";
 		n++;
 		prime = true;
 	}
