@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <climits>
 #include <fstream>
 #include <string>
 
@@ -28,7 +27,7 @@ void readFile(vector<string> &lista)
 {
 	ifstream in_file("names.txt");
 	if (!in_file.good()) {
-		cout << "Error opening file.\n";
+		cout << "Error opening file \"names.txt\".\n";
 		exit(-1);
 	}
 	while (!in_file.eof())
@@ -45,7 +44,7 @@ void writeFile(vector<string> &lista)
 {
 	ofstream out_file("names_sorted.txt");
 	for (unsigned int i = 0; i < lista.size(); i++) {
-		out_file << lista[i]<<endl;
+		out_file << lista[i] << endl;
 	}
 	out_file.close();
 	return;
